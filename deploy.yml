@@ -1,6 +1,5 @@
 ---
 - name: Pull Docker Image from Docker Hub
-  connection : local
   hosts: localhost
   remote_user: dart
   become: false

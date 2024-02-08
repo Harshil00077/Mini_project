@@ -1,24 +1,24 @@
 ---
 - name: Pull Docker Image from Docker Hub
-  hosts: local
+  hosts: all
   connection: local
   remote_user: harshil
   become: false
   tasks:
     - name: Pull Docker Image
-      echo "heelo"
-    #   docker_image:
-    #     name: "harshil00077/calculator"
-    #     source: pull
-    #   register: docker_pull_result
+      # echo "heelo"
+      docker_image:
+        name: "harshil00077/calculator"
+        source: pull
+      register: docker_pull_result
 
-    # - name: Display Docker Pull Result
-    #   debug:
-    #     var: docker_pull_result
+    - name: Display Docker Pull Result
+      debug:
+        var: docker_pull_result
         
-    # - name: Start Docker service
-    #   service:
-    #     name: docker
-    #     state: started
-    # - name: Running container
-    #   shell: docker run -it -d --name calculator harshil00077/calculator
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+    - name: Running container
+      shell: docker run -it -d --name calculator harshil00077/calculator

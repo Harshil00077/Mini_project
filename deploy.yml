@@ -2,7 +2,7 @@
 - name: Pull Docker Image from Docker Hub
   hosts: all
   connection: local
-  remote_user: harshil
+  remote_user: dart
   become: false
   tasks:
     - name: Pull Docker Image

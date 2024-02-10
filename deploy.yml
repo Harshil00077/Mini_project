@@ -3,6 +3,7 @@
   connection : local
   hosts: localhost
   remote_user: dart
+  gather_facts: false
   become: false
   tasks:
     - name: Pull Docker Image

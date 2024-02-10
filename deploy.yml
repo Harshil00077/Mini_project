@@ -8,18 +8,24 @@
   tasks:
     - name: Pull Docker Image
       # echo "heelo"
-      docker_image:
-        name: "harshil00077/calculator"
-        source: pull
-      register: docker_pull_result
+      local action :
+        docker_image:
+          name: "harshil00077/calculator"
+          source: pull
+        register: docker_pull_result
 
     - name: Display Docker Pull Result
-      debug:
-        var: docker_pull_result
+      local action :
+
+        debug:
+          var: docker_pull_result
         
     - name: Start Docker service
-      service:
-        name: docker
-        state: started
+      local action :
+
+        service:
+          name: docker
+          state: started
     - name: Running container
-      shell: docker run -it -d --name calculator harshil00077/calculator
+      local action :
+        shell: docker run -it -d --name calculator harshil00077/calculator

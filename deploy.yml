@@ -1,31 +1,23 @@
 ---
 - name: Pull Docker Image from Docker Hub
-  connection : local
   hosts: localhost
   remote_user: dart
-  gather_facts: false
   become: false
   tasks:
     - name: Pull Docker Image
       # echo "heelo"
-      local action :
-        docker_image:
-          name: "harshil00077/calculator"
-          source: pull
-        register: docker_pull_result
+      docker_image:
+        name: "harshil00077/calculator"
+        source: pull
+      register: docker_pull_result
 
     - name: Display Docker Pull Result
-      local action :
-
-        debug:
-          var: docker_pull_result
+      debug:
+        var: docker_pull_result
         
     - name: Start Docker service
-      local action :
-
-        service:
-          name: docker
-          state: started
+      service:
+        name: docker
+        state: started
     - name: Running container
-      local action :
-        shell: docker run -it -d --name calculator harshil00077/calculator
+      shell: docker run -it -d --name calculator harshil00077/calculator

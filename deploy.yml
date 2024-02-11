@@ -5,7 +5,6 @@
   become: false
   tasks:
     - name: Pull Docker Image
-      # echo "heelo"
       docker_image:
         name: "harshil00077/calculator"
         source: pull

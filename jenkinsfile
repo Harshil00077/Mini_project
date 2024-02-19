@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     // Stop and remove existing container if it exists
-                    sh 'docker rm -f calc || true'
+                    sh 'docker rm -f calculator || true'
                 }
             }
         }

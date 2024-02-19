@@ -35,8 +35,15 @@ pipeline {
                  }
             }
         }
-
-   stage('Run Ansible Playbook') {
+        stage('Stop and Remove Existing Container') {
+            steps {
+                script {
+                    // Stop and remove existing container if it exists
+                    sh 'docker rm -f calc || true'
+                }
+            }
+        }
+       stage('Run Ansible Playbook') {
             steps {
                 script {
                     ansiblePlaybook(
@@ -46,6 +53,5 @@ pipeline {
                 }
             }
         }
-
     }
 }

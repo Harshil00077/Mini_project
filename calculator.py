@@ -42,17 +42,22 @@ while(True):
             res = "Cannot divide by zero"
     elif ch == '5':
         a = float(input("Enter The Number: "))
-        res = a**0.5
+        if a>=0:
+            res = a**0.5
+        else:
+            res = "can't take square root of negative number"
     elif ch == '6':
         a = float(input("Enter The Number: "))
         if a>=0:
             res = fact(a)
-        res = "Factorial of negative numbers is not defined."
+        else:
+            res = "Factorial of negative numbers is not defined."
     elif ch == '7':
         a = float(input("Enter First Number: "))
         if a > 0:
             res = math.log(a)
-        res = "Cannot take log of negative or zero"
+        else:
+            res = "Cannot take log of negative or zero"
     elif ch == '8':
         a = float(input("Enter The Base for power: "))
         b = float(input("Enter Power of Number You Want: "))

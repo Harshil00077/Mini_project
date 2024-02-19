@@ -50,12 +50,12 @@ while(True):
         res = "Factorial of negative numbers is not defined."
     elif ch == '7':
         a = float(input("Enter First Number: "))
-        if b > 0:
+        if a > 0:
             res = math.log(a)
         res = "Cannot take log of negative or zero"
     elif ch == '8':
         a = float(input("Enter The Base for power: "))
-        b = float(input("Enter Power of Numoube You Want: "))
+        b = float(input("Enter Power of Number You Want: "))
         res = a**b
     else:
         res = "Exiting"

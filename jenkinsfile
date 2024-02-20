@@ -25,6 +25,13 @@ pipeline {
             }
         }
 
+        stage('Test Code') {
+            steps {
+                sh "chmod u+x Test.py"
+                sh "./Test.py"
+            }
+        }
+
         stage('Push Docker Images') {
             steps {
                 script{

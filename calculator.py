@@ -24,14 +24,12 @@ def square_root(a):
         return "Can't take square root of negative number"
 
 def factorial(a):
-    a = float(input("Enter The Number: "))
     if a >= 0:
         return math.factorial(int(a))
     else:
         return "Factorial of negative numbers is not defined."
 
 def natural_logarithm(a):
-    a = float(input("Enter First Number: "))
     if a > 0:
         return math.log(a)
     else:

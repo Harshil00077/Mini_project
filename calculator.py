@@ -2,13 +2,56 @@
 
 import math
 
+def addition():
+    a = float(input("Enter First Number: "))
+    b = float(input("Enter Second Number: "))
+    return a + b
 
-def fact(n):
-    if n==0 or n==1:
-        return 1
-    return n*fact(n-1)
+def subtraction():
+    a = float(input("Enter First Number: "))
+    b = float(input("Enter Second Number: "))
+    return a - b
 
-while(True):
+def multiplication():
+    a = float(input("Enter First Number: "))
+    b = float(input("Enter Second Number: "))
+    return a * b
+
+def division():
+    a = float(input("Enter First Number: "))
+    b = float(input("Enter Second Number: "))
+    if b != 0:
+        return a / b
+    else:
+        return "Cannot divide by zero"
+
+def square_root():
+    a = float(input("Enter The Number: "))
+    if a >= 0:
+        return a**0.5
+    else:
+        return "Can't take square root of negative number"
+
+def factorial():
+    a = float(input("Enter The Number: "))
+    if a >= 0:
+        return math.factorial(int(a))
+    else:
+        return "Factorial of negative numbers is not defined."
+
+def natural_logarithm():
+    a = float(input("Enter First Number: "))
+    if a > 0:
+        return math.log(a)
+    else:
+        return "Cannot take log of negative or zero"
+
+def power():
+    a = float(input("Enter The Base for power: "))
+    b = float(input("Enter Power of Number You Want: "))
+    return a**b
+
+while True:
     print("1. Addition")
     print("2. Subtraction")
     print("3. Multiplication")
@@ -22,50 +65,21 @@ while(True):
     ch = input("Enter the Choice: ")
 
     if ch == '1':
-        a = float(input("Enter First Number: "))
-        b = float(input("Enter Second Number: "))
-        res = a + b
+        print("Result:", addition())
     elif ch == '2':
-        a = float(input("Enter First Number: "))
-        b = float(input("Enter Second Number: "))
-        res = a - b
+        print("Result:", subtraction())
     elif ch == '3':
-        a = float(input("Enter First Number: "))
-        b = float(input("Enter Second Number: "))
-        res = a * b
+        print("Result:", multiplication())
     elif ch == '4':
-        a = float(input("Enter First Number: "))
-        b = float(input("Enter Second Number: "))
-        if b != 0:
-            res = a / b
-        else:
-            res = "Cannot divide by zero"
+        print("Result:", division())
     elif ch == '5':
-        a = float(input("Enter The Number: "))
-        if a>=0:
-            res = a**0.5
-        else:
-            res = "can't take square root of negative number"
+        print("Result:", square_root())
     elif ch == '6':
-        a = float(input("Enter The Number: "))
-        if a>=0:
-            res = fact(a)
-        else:
-            res = "Factorial of negative numbers is not defined."
+        print("Result:", factorial())
     elif ch == '7':
-        a = float(input("Enter First Number: "))
-        if a > 0:
-            res = math.log(a)
-        else:
-            res = "Cannot take log of negative or zero"
+        print("Result:", natural_logarithm())
     elif ch == '8':
-        a = float(input("Enter The Base for power: "))
-        b = float(input("Enter Power of Number You Want: "))
-        res = a**b
+        print("Result:", power())
     else:
-        res = "Exiting"
-    
-    if res!="Exiting":
-        print("Result:", res)
-    else:
+        print("Exiting")
         break

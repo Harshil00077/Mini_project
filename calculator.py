@@ -51,35 +51,39 @@ def power():
     b = float(input("Enter Power of Number You Want: "))
     return a**b
 
-while True:
-    print("1. Addition")
-    print("2. Subtraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Square Root")
-    print("6. Factorial")
-    print("7. Natural Logarithm")
-    print("8. Power")
-    print("9- Exit")
+def main():
 
-    ch = input("Enter the Choice: ")
-
-    if ch == '1':
-        print("Result:", addition())
-    elif ch == '2':
-        print("Result:", subtraction())
-    elif ch == '3':
-        print("Result:", multiplication())
-    elif ch == '4':
-        print("Result:", division())
-    elif ch == '5':
-        print("Result:", square_root())
-    elif ch == '6':
-        print("Result:", factorial())
-    elif ch == '7':
-        print("Result:", natural_logarithm())
-    elif ch == '8':
-        print("Result:", power())
-    else:
-        print("Exiting")
-        break
+    while True:
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Square Root")
+        print("6. Factorial")
+        print("7. Natural Logarithm")
+        print("8. Power")
+        print("9- Exit")
+    
+        ch = input("Enter the Choice: ")
+    
+        if ch == '1':
+            print("Result:", addition())
+        elif ch == '2':
+            print("Result:", subtraction())
+        elif ch == '3':
+            print("Result:", multiplication())
+        elif ch == '4':
+            print("Result:", division())
+        elif ch == '5':
+            print("Result:", square_root())
+        elif ch == '6':
+            print("Result:", factorial())
+        elif ch == '7':
+            print("Result:", natural_logarithm())
+        elif ch == '8':
+            print("Result:", power())
+        else:
+            print("Exiting")
+            break
+if __name__ == "__main__":
+    main()
